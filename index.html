@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<title>SEAdventure</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+	<meta name="author" content="Sally Busch, Simon Rother, Vincenz Arlt" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+	<!-- header Section -->
+		<section id="header" class="header-section">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12 inner">
+									<a href="#"><img id="logo" src="media/logo.png"></a>
+			            <ul class="nav-menu right">
+											<li><a href="#"><i class="fa fa-video-camera fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#ahoi"><i class="fa fa-anchor fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#spielziel"><i class="fa fa-trophy fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#spielablauf"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#schiffe"><i class="fa fa-ship fa-2x" aria-hidden="true"></i></a></li>
+			                <li><a class="octo" href="#kraken">v</a></li>
+											<li><a href="#power-ups"><i class="fa fa-medkit fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#weg"><i class="fa fa-compass fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#nutzertests"><i class="fa fa-users fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#some2"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a></li>
+											<li><a href="#some3"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a></li>
+
+			            </ul>
+								</div>
+						</div>
+				</div>
+		</section>
+
+		<section id="teaser-section" class="scheme-grey">
+			<div class="container">
+					<div class="row">
+							<div class="col-lg-12 inner">
+									<video class="centered" id="teaser" src="media/teaser.mov" controls ></video>
+							</div>
+					</div>
+			</div>
+	</section>
+
+	<!-- About Section -->
+		<section id="ahoi" class="ahoi-section scheme-white">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12 inner">
+									<h2><i class="fa fa-anchor fa-lg" aria-hidden="true"></i> Ahoi ihr Landratten!</h2>
+									<h3><img id="logo_full" src="media/logo_full.png" width=250px alt="logo" class="right" >SEAdventure ist ein Tabletop-Spiel für 4 Personen ab 10 Jahren. Es entstand im 4. und 5. Semester unseres Medieninformatik-Studiums im Rahmen eines Komplexpraktikums an der Technischen Universität Dresden. Im Oktober 2016 begannen wir unsere Arbeit als 5-Personen-Team, doch mit der Zeit reduzierte sich die Mitgliederanzahl auf drei. Wir, das sind Sally Busch, Simon Rother und Vincent Arlt, konnten in diesem Projekt viele praktische Einblicke in die Gebiete Game Design und Game Development sammeln. Wir entwickelten die Anwendung mit Hilfe der Entwicklungs-Plattform libavg, die uns vom Interactive Media Lab zur Verfügung gestellt wurde.
+										Zu Beginn des Komplexpraktikums schafften wir und die beiden anderen Teams uns einen Überblick über die Funktionen und Möglichkeiten von libavg. Wir hielten Vorträge und arbeiteten uns somit ein.</h3>
+								</div>
+						</div>
+				</div>
+		</section>
+
+		<!-- portfolio Section -->
+		<section id="spielziel" class="spielziel-section scheme-deepblue">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12 inner">
+									<h2><i class="fa fa-trophy fa-lg" aria-hidden="true"></i> Spielziel</h2>
+									<h3>Das Spiel findet in einer maritimen Umgebung statt. Im Zentrum steht ein riesiger Kraken. Die vier Spieler kontrollieren jeweils von einer der vier Ecken des Spielfeldes aus einen Krakenarm. Außerdem besitzen sie Schiffe. Ihr Ziel ist es, mit dem Krakenarm herumtreibende Perlen zu sammeln und den Schiffen auszuweichen, die mit Kanonenkugeln auf die Arme feuern. Sammelt der Krakenarm eine Perle ein und trägt sie zurück zum Kraken in der Mitte des Spielfelds, dann erhält der Spieler Punkte. Gewonnen hat der Spieler, der am Ende des Spiels die meisten Punkte hat.
+									</h3>
+								</div>
+						</div>
+				</div>
+		</section>
+
+	    <section id="spielablauf" class="spielablauf-section scheme-white">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-12 inner">
+										<h2><i class="fa fa-gamepad fa-lg" aria-hidden="true"></i> Spielablauf</h2>
+										<h3>Das gesamte Spiel ist in zwei sich wiederholende Phasen unterteilt, in denen jeweils einer der Hauptaspekte des Spiels im Vordergrund steht. Den Anfang macht die Schiffsphase. Hier legen die Spieler die Kurse ihrer Schiffe fest, wobei sie versuchen sollten Fässer einzusammeln.	Außerdem tauchen in dieser Phase immer neue Perlen und Fässer (mit mehr oder weniger hilfreichen Gegenständen) auf. Nach einer kurzen Erholungspause geht es auch schon weiter.
+										<br>In der zweiten Phase, der Krakenphase, steuert jeder Spieler den Krakenarm seiner Farbe direkt mit Hilfe seines Steuerfeldes. Währenddessen setzen sich die Schiffe entlang des zuvor festgelegten Kurses in Bewegung. Dabei sammeln sie womöglich die vielfältigen Power-Ups ein. Die Spieler steuern die Kraken, weichen gegnerischen Schiffen und deren Kanonenkugeln aus, bringen aufgesammelte Perlen zum Kraken und verdienen somit Punkte.
+										<br>Nach einer weiteren Pause beginnt der ganze Spaß von vorn, denn es schließen sich weitere Schiffs- und Krakenphasen an. Ab jetzt wechseln in jeder Schiffsphase die Farben der Krakenarme. Daher müssen die Spieler ihre Perlen jetzt in einer anderen Ecke des Spielfelds sammeln und ihre Schiffe an die neuen Gegebenheiten anpassen. Um etwas Zeit zum Durchatmen zu bekommen, gibt es zwischen den Phasen jeweils eine kurze Pausephase. In dieser können die Spieler sich auf die andere Phase umstellen.										</h3>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+
+		<!-- power-ups Section -->
+			<section id="schiffe" class="schiffe-section scheme-lightblue">
+					<div class="container">
+							<div class="row">
+									<div class="col-lg-12 inner">
+										<h2><i class="fa fa-ship fa-lg" aria-hidden="true"></i> Die Schiffe</h2>
+										<h3>	Zu Beginn des Spiels besitzt jeder Spieler genau ein Schiff. Aufgabe der Schiffe ist es, die gegnerischen Krakenarme beim Einsammeln der Perlen zu hindern. Dazu sind sie alle mit Kanonen bewaffnet, um auf die Arme zu feuern. Das Feuer wird automatisch eröffnet, sobald sich ein Arm in Reichweite des Schiffes befindet. Trifft eine Kanonenkugel einen Krakenarm, ist dieser für einige Sekunden betäubt, kann sich nicht mehr weiter bewegen und wird ein kleines Stück zurückgestoßen. Schafft es hingegen der Krakenarm das Schiff zu berühren, ohne von ihm getroffen zu werden, so wird das Schiff selbst betäubt und nimmt Schaden.
+											<br><br>
+											<img class="left" id="path" src="media/path.png" width=350px>
+											Daneben haben die Schiffe aber noch eine zweite Aufgabe. Sie können im Wasser treibende Fässer aufsammeln, wenn das Treibgut auf ihrem Kurs liegt. In diesen Fässern können Gegenstände versteckt sein, die dem Spieler Spezialfähigkeiten verleihen, wie zum Beispiel höhere Fahrgeschwindigkeit für seine Schiffe oder die Möglichkeit neue Schiffe in See stechen zu lassen! Aber Achtung, das geht natürlich nur, wenn die Fässer keinen Sprengstoff enthalten, der das Schiff in die Luft jagt..
+											<br><br>
+											Schiffe sind mit der Farbe des Spielers markiert, dem sie gehören. Sie werden nicht direkt gesteuert, sondern indem ihnen in der sogenannten "Schiffsphase" ein Kurs beziehungsweise Pfad vorgegeben wird. Jeder dieser Pfade wird an den sechs Eckpunkten von Rettungsringen markiert. Mittels Drag and Drop kann der Spieler die Ringe verschieben und damit den Kurs anpassen. Die Schiffe können jedoch keine allzu spitzen Winkel fahren. Wird ein Kurs beschrieben, der nicht befahren werden kann, wird dies mit einem ausgegrauten „geisterhaften“ Rettungsring angezeigt. Der eigentliche Pfad bleibt auf dem maximal möglichen Winkel eingerastet. Dies alles passiert in der sogenannten „Schiffsphase“, nach welcher der Pfad für alle neugierigen Blick verschwindet. Beginnt die "Krakenphase", dann können die Spieler gegnerische (und die eigenen) Pfade nur noch anhand der Bewegung der Schiffe erahnen. Das erschwert so einiges.
+											<br><br>
+											Jedes Schiff hat einen Stabilitätswert, der bestimmt, wie viele Treffer und Explosionen es aushält. Muss ein Schiff zu viel einstecken, wird es zerstört und verschwindet vom Spielfeld. Von dieser Regel gibt es jedoch eine einzige Ausnahme: das Startschiff, also das, mit dem jeder Spieler das Spiel beginnt, kann nicht zerstört werden. Es lohnt sich also auch riskante Manöver zu fahren, denn ein Schiff wird immer übrig bleiben. Wer sich merkt, mit welchem Schiff er das Spiel begonnen hat, kann natürlich diesem Schiff den Hauptanteil an gefährlichen Angriffen überlassen und somit die hart erarbeiteten Bonus-Schiffe schonen. Jedoch kann es sich manchmal auch als schlauer erweisen, eins der verletzlicheren in die Schlacht zu schicken, da es womöglich mehr Schaden beim Gegner anrichtet.
+											<br><br><img id="raft" src="media/raftblue.png" alt="kleines Schiff" width=100px>
+											Es gibt drei verschiedene solcher Bonus-Schiffstypen mit jeweils unterschiedlichen Stärken und Schwächen. Sie unterscheiden sich in Angriffskraft, Feuerreichweite, Größe, Geschwindigkeit und Stabilität. Um zu gewinnen, müssen die Schiffe geschickt eingesetzt werden, um ihre Stärken auszuspielen und die gegnerischen Krakenarme aufzuhalten.
+											Die kleinen, wendigen Boote sind vor allem sehr schnell. Sie eignen sich hervorragend dazu, lange Kurse zu fahren und trotzdem einen Bereich gegen den Kraken abzusichern. Auch Fässer können sie flink einsammeln und mit ihrem hohen Tempo dem Gegner wegschnappen. Was sie an Geschwindigkeit aufbieten können, geht allerdings zu Lasten der Feuerkraft und Stabilität. Sie sind nur schwach bewaffnet, weshalb sie nur langsam und mit wenig Kraft schießen. Die Kanonenkugeln fliegen nicht besonders weit und landen nach kurzer Zeit im Wasser. Ein geschickter Spieler kann ihnen ausweichen und die kleinen Schiffe rammen, wodurch sie schnell zu Bruch gehen. Es empfiehlt sich, mit ihnen lange, schwer zu verfolgende Pfade zu ziehen. Damit kann der Spieler des Krakenarms ihren Weg nur schlecht vorhersagen und ihnen nur schwer aus dem Weg gehen.
+											<br><br><img id="cruiser" src="media/cruiserblue.png" alt="großes Schiff" width=200px>
+											Dann gibt es die großen Dampfer. Sie sind das genaue Gegenteil der kleinen Boote, langsam, träge, aber schwer bewaffnet. Gibt man ihnen einen langen Kurs vor, kann es sogar sein, dass sie nicht einmal eine volle Runde fahren können! Dafür können sie in dem Bereich, in dem sie sich aufhalten, ihre hervorragende Bewaffnung einsetzen. Sie schießen viele Kanonenkugeln ab, die weit fliegen und die Krakenarme auf Distanz halten. Am besten sind sie, wenn sie einen kleinen Bereich bewachen, wie zum Beispiel eine einzelne, wertvolle Perle. Der Krakenarm kann sich ihm nur unter größter Anstrengung nähern, wird mit hoher Wahrscheinlichkeit getroffen und muss abdrehen und sich ein anderes Ziel suchen.
+											<br><br><img id="normalship" src="media/shipblue.png" alt="normales Schiff" width=120px>
+											Genau dazwischen reihen sich die normalen Standard-Schiffe, wie das mit dem die Spieler beginnen, ein. Es hat in allen Bereichen mittlere Werte und kann für alle Einsatzzwecke benutzt werden. Fässer aufsammeln, Perlen bewachen oder Krakenarme abschießen – Sie sind für alles geeignet. Die anderen Schiffe sind in ihren Kerndisziplinen stärker, dafür kann dieses Schiff aber flexibel genutzt werden, um verschiedene Aufgaben zu erfüllen.
+											<br><br>
+											<span class="tipp">Übrigens: Die Schiffe nehmen ALLE Krakenarme aufs Korn, auch den, der die eigene Farbe hat. Sollte man seinen Krakenarm in der eigenen Ecke haben, empfiehlt es sich, die Schiffe zurückzuziehen, damit man ungestört Perlen einsammeln kann… also zumindest solange die aufmerksamen Nachbarn ihre Schiffe nicht nachziehen…
+											</span>
+										</h3>
+
+									</div>
+							</div>
+					</div>
+			</section>
+
+
+		<!-- contact Section -->
+	    <section id="kraken" class="kraken-section scheme-deepblue">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-12 inner">
+										<h2><span id="octospan">v</span> Der Kraken</h2>
+										<h3>	<img id="krakenpic" alt="Der Kraken" width=500px class="right" src="media/kraken.png">
+											Er ist groß, violett und mag Perlen. Gemeint ist hierbei der große Kraken, der im Zentrum des Spielfels lauert. Mit seinen acht Tentakeln schnappt er sich die wertvollen Perlen, die im Wasser herumtreiben und sammelt sie ein. Die Spieler helfen ihm dabei, indem sie seine Arme steuern. Nur wer sich schnell die Perlen sichern kann, kann das Spiel gewinnen.
+											<br><br>
+											Ein Spieler steuert zu einem Zeitpunkt jeweils nur genau einen Krakenarm. Welchen Arm genau, wird in jeder Runde erneut zufällig festgelegt. Jeder der acht Arm hat einen bestimmten Bereich zugeteilt bekommen, in dem er sich bewegen kann. Jeder umfasst ungefähr ein Viertel des Spielfeldes und entspricht zwei aneinandergrenzenden Abschnitten des Wassers. Diese sind unterschiedlich schattiert, sodass die Spieler anhand der Farben die Flächen abschätzen können, in denen sich ihr Krakenarm frei bewegen kann.
+											<br><br>
+											Zur Bewegung seines Arms hat jeder Spieler ein Steuerfeld in Form eines Kompasses in seiner Ecke des Spielfelds. Darauf befindet sich jeweils ein Steuerknopf, den die Spieler betätigen müssen. Die Geschwindigkeit der Arme lässt sich kontrollieren, in dem der Steuerknopf entsprechend weit ins Spielfeld gezogen wird. Zieht man über das Kompass-Feld hinaus, fährt der Arm mit Maximalgeschwindigkeit weiter. Die Richtung der Bewegung gibt man an, indem man den Steuerknopf in die entsprechende Richtung zieht.
+											<br><br><img id="compass" alt="Steuerfeld" width=250px class="left" src="media/compass.png">
+											Das Ziel eines jeden Krakenarms soll sein, die wertvollen punktebringenden Perlen zu sammeln. Berührt der Arm eine Perle, so hebt er sie auf. Ein Arm kann immer nur maximal eine Perle tragen. Um Punkte für die Perle zu erhalten, muss sie zum Kraken selbst zurückgebracht werden. Nähert man sich mit einem die Perle tragenden Arm dem Kraken, so verschwindet die Perle und der Spieler erhält Punkte. Der Krakenarm kann nun sofort wieder weiter auf Perlenjagd gehen. Auf diese Weise wird das Spielfeld in der Krakenphase nach und nach von den Perlen geleert.
+											<br><br>
+											Dabei müssen die anderen Spieler es nicht wehrlos hinnehmen, dass jemand in ihrem Bereich Perlen stibitzt. Sie setzen ihre Schiffe ein, um die Perlen vor den anderen Spielern und deren Krakenarmen zu schützen. Um dennoch Perlen zu sammeln, stehen dem Krakenarm verschiedene Möglichkeiten offen.
+											<br><br><img id="arm" alt="Arm" width=100px class="right" src="media/arm.png">
+											Der Kurs des Schiffes ist zwar nicht sichtbar, lässt sich aber erahnen. Bewegt man sich mit Sicherheitsabstand hinter einem Schiff, lassen sich Perlen im Bereich des Schiffes einsammeln. Eine andere Methode ist es, das Schiff einfach zu rammen! Weicht man erfolgreich genug den Kanonenkugeln aus und berührt zum Schluss das Schiff, dann ist es betäubt und kann für eine Weile nicht mehr weiterfahren oder -feuern. Nun lassen sich ungestraft Perlen aufsammeln, zumindest bis die Betäubung nachlässt. Wer auf Nummer sicher gehen will, kann seinen Arm auch mitten in den Weg des Schiffes stellen. Der Arm wird zwar getroffen, das Schiff kollidiert aber trotzdem mit dem Arm und bleibt länger betäubt als der Arm! Diese Methode kostet aber viel Zeit, in der die anderen Spieler vielleicht mehr Perlen einsammeln können.
+										</h3>
+
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+			<!-- some Section -->
+		    <section id="power-ups" class="power-ups-section scheme-white">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-lg-12 inner">
+											<h2><i class="fa fa-medkit fa-lg" aria-hidden="true"></i> Fässer, Perlen und Power-Ups</h2>
+											<h3>	Auf und im Wasser gibt es nicht nur den Kraken und die Schiffe. Es treiben auch unzählige andere Gegenstände in den Fluten. Sie verändern den Spielablauf und geben die Möglichkeit, das Spiel für sich zu entscheiden. Es gibt hierbei zwei besondere Arten von Treibgut: die Perlen und die Fässer, die Power-Ups oder Bomben enthalten können. Alle Perlen und Fässer werden jeweils zu Beginn der Schiffsphase neu auf dem Spielfeld verteilt.
+												<br><br><img id="pearl" src="media/pearl.png" class="left" width=100px alt="kleine Perle"><img id="pearlBig" src="media/pearlBig.png" class="right" width=150px alt="große Perle">
+												Die Perlen sind die einzige Möglichkeit, in SEAdventure Punkte zu erhalten und das Spiel zu gewinnen. Es gibt sie in zwei verschiedenen Ausführungen, die unterschiedlich viele Punkte bringen: kleine weiße und große rosa Perlen. Beide Arten tauchen über das gesamte Spielfeld verteilt auf. Die großen wertvolleren rosa Perlen sind natürlich seltener - echte Raritäten quasi! Um eine von ihnen zu ergattern oder überhaupt im richtigen Bereich des Spielfeldes entdecken zu können, gehört auch ein bisschen Glück dazu. Egal welche Perle ein Krakenarm erwischt, Punkte bekommt der Spieler erst, wenn er sie sicher zum Kraken manövriert hat. Manchmal macht einem die ablaufende Zeit aber auch einen Strich durch die Rechnung..
+												<br><br>
+												Fässer tauchen wie die Perlen recht zufällig auf, aber es gibt immer mindestens ein Fass je Spielfeld-Achtel. Sie können nur mit Hilfe der Schiffe eingesammelt werden. Führt der Kurs eines Schiffes über eins der beliebten Fässer, dann gibt es eine Überraschung für den Spieler, dem das Schiff gehört. Entweder es der unerwünschte Fall einer Explosion ein, die das eigene Schiff beschädigt und für einige Zeit in Schockstarre verweilen lässt, oder der Spieler erhält ein zufälliges Power-Up!
+												<br><br><img id="fass" src="media/item.png" class="left" width=200px alt="Fass">
+												Power-Ups sind eine sehr gute Möglichkeit, den Spielablauf zu eigenen Gunsten hin zu verändern und selbst verloren geglaubte Spielrunden noch zu drehen. Sammelt man welche ein, dann landen diese im dafür vorgesehenen Strand-Bereich des jeweiligen Spielers - quasi im sicheren Hafen! Jeder kann zu einem Zeitpunkt maximal drei Power-Ups auf Vorrat haben. Alle weiteren, die eingesammelt werden, verschwinden auf mehr oder weniger mysteriöse Art und Weise.. <br>Man sollte sie also schnellstmöglich einsetzen.
+												<br><br>
+												Es gibt im Wesentlichen zwei verschiedene Arten von Power-Ups: Die erste schickt neue Schiffe ins Gefecht, die andere verändert Schiffseigenschaften von gegnerischen Schiffen oder der eigenen Flotte. Power-Ups werden aktiv, sobald sie mittels Drag and Drop auf das Spielfeld gesetzt werden. Durch die gewählten Icons ist recht intuitiv erkennbar, welchen Effekt ein bestimmtes Power-Up hat.
+												<br><br><img id="power3" src="media/power3.png" class="right" alt="power3"><img id="power2" src="media/power2.png" class="right" alt="power2"><img id="power1" src="media/power1.png" class="right" alt="power1">
+												So gibt es für jede der drei Schiffsarten (klein, normal, groß) es ein eigenes Power-Up, mit dem man ein weiteres Schiff dieser Art erhält. Es erscheint dann in der Spielfeldecke des Spielers direkt in Kampfbereitschaft und kann in den kommenden Schiffsphasen auch gesteuert werden. Wird es In der Schiffsphase herbeigerufen, lässt sich sofort ein neuer Kurs bestimmen, in der Krakenphase fährt es hingegen zunächst einen Standard-Kurs, aber selbst das kann manchmal im richtigen Moment die Rettung bedeuten. Sie bleiben unbegrenzt lang im Spiel, es sei denn, sie nehmen zu viel Schaden durch Explosionen und Krakenangriffe und werden zerstört.
+												<br><br><img id="power4" class="left" src="media/power4.png" alt="power4"><img id="power5" class="left" src="media/power5.png" alt="power5">
+
+												Des Weiteren gibt es verschiedene Power-Ups, die einen bestimmten Wert der Schiffe, die sich zum Zeitpunkt der Aktivierung auf dem Feld befinden, verändern. Die einen, beeinflussen die Stärke der Kanonen und die anderen, passen die Geschwindigkeit der Schiffe an. Verstärkungen im positiven Sinne (stärkere Kanonen, schnellere Schiffe) wirken nur auf die eigene Schiffsflotte, Abschwächungen (schwächeren Kanonen, verlangsamte Geschwindigkeit) auf sämtliche Schiffe der Gegner! Ihre Wirkungsdauer ist jedoch zeitlich begrenzt, das heißt nach ein paar Runden verfliegt ihr Effekt, wenn er nicht schon von den Gegnern mit anderen Power-Ups aufgehoben wurde.
+												<img id="power6" class="left" src="media/power6.png" alt="power6"><img id="power7" class="left" src="media/power7.png" alt="power7">
+												<br><br><span class="tipp">Zwei kleine Tipps: Man sollte zuerst Schiffe herbeirufen und erst dann ihre Werte erhöhen, damit auch sie von den Verbesserungen profitieren. Es kann sich als nützlich herausstellen z.B. eine Geschwindigkeitsverstärkung aufzuheben, bis man vom Gegner verlangsamt wurde, um nicht im entscheidenden Moment im Schneckentempo festzusitzen.</span>
+
+											</h3>
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+
+				<section id="weg" class="weg-section scheme-deepblue">
+						<div class="container">
+								<div class="row">
+										<div class="col-lg-12 inner">
+											<h2><i class="fa fa-compass fa-lg" aria-hidden="true"></i> Unser Weg zum Ziel</h2>
+											<h3>	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+														Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+														Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+														Nam liber tempor cum usce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+											</h3>
+										</div>
+								</div>
+						</div>
+				</section>
+
+					<section id="nutzertests" class="nutzertests-section scheme-grey">
+							<div class="container">
+									<div class="row">
+											<div class="col-lg-12 inner">
+												<h2><i class="fa fa-users fa-lg" aria-hidden="true"></i> Nutzertests</h2>
+												<h3>	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+															Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+															Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+															Nam liber tempor cum usce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+												</h3>
+											</div>
+									</div>
+							</div>
+					</section>
+
+
+			<!-- footer Section -->
+				<section id="footer" class="footer-section scheme-darkblue">
+						<div class="container">
+								<div class="row">
+										<div class="col-lg-12 inner">
+											<p class="left">© Copyright 2017 by Sally Busch, Simon Rother, Vincenz Arlt</p>
+											<p class="right">Musik: www.bensound.com/ukulele</p>
+										</div>
+								</div>
+						</div>
+				</section>
+
+</body>
+</html>
