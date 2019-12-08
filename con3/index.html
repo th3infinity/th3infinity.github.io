@@ -149,7 +149,7 @@
           <div class="value">
               <div id="value1" class="value_el"> <!--small-12 medium-3 large-3*/-->
                 <div class="flip-card">
-                  <div id="fc-v1" class="flip-card-inner">
+                  <div id="fc-v1" class="flip-card-inner" onmouseover="flipBack(this)" onmouseout="flipFront(this)">
                     <div class="flip-card-front">
                         <img src="img/convenience.png" alt="" title="" class="value_icon"/>
                         <h2 class="title">convenience</h2>
@@ -163,7 +163,7 @@
       
               <div id="value2" class="value_el"> <!--small-12 medium-3 large-3*/-->
                 <div class="flip-card">
-                    <div id="fc-v2" class="flip-card-inner">
+                    <div id="fc-v2" class="flip-card-inner" onmouseover="flipBack(this)" onmouseout="flipFront(this)">
                       <div class="flip-card-front">
                           <img src="img/accessibility.png" alt="" title="" class="value_icon"/>
                           <h2 class="title">accessibility</h2>
@@ -177,7 +177,7 @@
       
               <div id="value3" class="value_el">
                   <div class="flip-card">
-                      <div id="fc-v3" class="flip-card-inner">
+                      <div id="fc-v3" class="flip-card-inner" onmouseover="flipBack(this)" onmouseout="flipFront(this)">
                         <div class="flip-card-front">
                             <img src="img/privacy.png" alt="" title="" class="value_icon"/>
                             <h2 class="title">privacy</h2>
@@ -197,7 +197,7 @@
         // build scene
         var scenePin = new ScrollMagic.Scene({
                 triggerElement: "#triggervalue",
-                duration: 1300,
+                duration: 1800,
                 offset: 350
                 })
                 .setPin("#values")
@@ -212,80 +212,80 @@
                 .addTo(controller);
         var scenev1out = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 330,
+                  offset: 350,
                   duration: 25
                 })
                 .setTween("#value1", 0.5, {scale: 1.0}) 
                 .addTo(controller);
         var scenev1turnin = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 380,
+                  offset: 400,
                   duration: 50
                 })
                 .setTween("#fc-v1", 0.5, {rotationY: "180_short"}) 
                 .addTo(controller);
         var scenev1turnout = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 510,
-                  duration: 25
+                  offset: 650,
+                  duration: 50
                 })
                 .setTween("#fc-v1", 0.5, {rotationY: "0_short"}) 
                 .addTo(controller);
         //VALUE2
         var scenev2in = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 560,
+                  offset: 800,
                   duration: 130
                 })
                 .setTween("#value2", 0.5, {scale: 1.2}) 
                 .addTo(controller);
         var scenev2out = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 690,
-                  duration: 25
+                  offset: 950,
+                  duration: 50
                 })
                 .setTween("#value2", 0.5, {scale: 1.0}) 
                 .addTo(controller);
         var scenev2turnin = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 740,
+                  offset: 1100,
                   duration: 50
                 })
                 .setTween("#fc-v2", 0.5, {rotationY: "180_short"}) 
                 .addTo(controller);
         var scenev2turnout = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 870,
-                  duration: 25
+                  offset: 1350,
+                  duration: 50
                 })
                 .setTween("#fc-v2", 0.5, {rotationY: "0_short"}) 
                 .addTo(controller);
         //VALUE3
         var scenev3in = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 920,
+                  offset: 1450,
                   duration: 130
                 })
                 .setTween("#value3", 0.5, {scale: 1.2}) 
                 .addTo(controller);
         var scenev3out = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 1050,
-                  duration: 25
+                  offset: 1600,
+                  duration: 50
                 })
                 .setTween("#value3", 0.5, {scale: 1.0}) 
                 .addTo(controller);
         var scenev3turnin = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 1100,
+                  offset: 1700,
                   duration: 50
                 })
                 .setTween("#fc-v3", 0.5, {rotationY: "180_short"}) 
                 .addTo(controller);
         var scenev3turnout = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 1300,
-                  duration: 25
+                  offset: 1950,
+                  duration: 50
                 })
                 .setTween("#fc-v3", 0.5, {rotationY: "0_short"}) 
                 .addTo(controller);
@@ -387,12 +387,13 @@
         <h1 class="title">Are you ready to change your life?</h1>
         <!--    End CTA Titles    -->
 
-        <!--    Start Button    -->
-        <a href="#" class="btn_fancy">
-          <div class="solid_layer"></div>
-          <div class="border_layer"></div>
-          <div class="text_layer">Preorder It Now!</div>
-        </a>
+        <!--    Order Button    -->
+        <div class="flip">
+          <a href="#">
+            <div class="front">Preorder It Now!</div>
+            <div class="back">Preorder It Now!</div>
+          </a>
+        </div>
         <!--    End Button    -->
 
       </div>
@@ -476,12 +477,12 @@
     </footer>
     <!--  End Footer Section  -->
 
-    <!--    Start Back To Top    -->
-    <a href="#" class="btn_fancy" id="back_top">
-      <div class="solid_layer"></div>
-      <div class="border_layer"></div>
-      <div class="text_layer"><img src="img/top_arrow.png" alt="Back to top" title="" class="top_arrow"></div>
-    </a>
+    <!--    Start Back To Top -->
+    <div class="btn-back" id="back_top">
+      <a href="#">
+        <img src="img/arrow-top-small.png" alt="Back to top" title="" class="top_arrow">
+      </a>
+    </div>
     <!--    End Back To Top    -->
 
 
@@ -497,6 +498,7 @@
     <script type="text/javascript" src="js/carouFredSel.js"></script>
     <script type="text/javascript" src="js/scrollTo.js"></script>
     <script type="text/javascript" src="js/video.js"></script>
+    <script type="text/javascript" src="js/flipcard.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
   </body>

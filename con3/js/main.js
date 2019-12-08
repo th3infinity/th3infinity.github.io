@@ -38,9 +38,6 @@ $(document).ready(function(){
 
 
 
-
-
-
     /*    Back to top button    */
     var back_top = $('#back_top');
 

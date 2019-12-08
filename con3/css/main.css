@@ -433,6 +433,10 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover{
   .flip-card:hover .flip-card-inner {
 	transform: rotateY(180deg);
   }
+
+  .flip-card .flip-card-inner .do-flip {
+	transform: rotateY(180deg);
+  }
   
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
@@ -1011,12 +1015,124 @@ footer p{
 
 
 
+.flip {
+	margin: 40px 25% 0 0;
+	
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	/*width: 250px;*/
+	height: 48px;
+	perspective: 500px;
+	/*top: 50%;
+	left: 50%;
+	margin: -24px 0 0 -80px; */
+}
 
+.flip a {
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transform: translateZ(-25px);
+	transition: transform 0.3s;
+	cursor: pointer;
+	color: var(--main-bg-color);
+}
 
+.flip a .front,.back {
+	margin: 0;
+	width: 250px;
+	height: 48px;
+	line-height: 48px;
+	position: absolute;
+	text-align: center;
+	letter-spacing: .4em;
+}
 
+.flip a .front{
+	background-color: var(--main-bg-color);
+	color: var(--main-highlight-color);
+	transform: rotateY(0) translateZ(24px);
+}
 
+.flip a .back{
+	background-color: rgba(white,.0);
+	color: rgba(var(--main-bg-color),.0);
+	transform: rotateX(90deg) translateZ(24px);
+	overflow: hidden;
+}
 
+.flip a .back::after {
+	content: '';
+	position: absolute;
+	top: -40%;
+	left: -8%;
+	width: 120%;
+	height: 50%;
+	background: var(--main-bg-color);
+	transform: rotate(8deg);
+	transition: all .5s ease;
+	transition-delay: .15s;
+}
 
+.flip a:hover {
+	transform: translateZ(-24px) rotateX(-90deg);
+}
+
+.flip a:hover .front {
+	background: black;
+	transition: all .8s ease;
+}
+
+.flip a:hover .back {
+	color: var(--main-bg-color);
+	transition: color .4s linear;
+	background: white;
+}
+
+.flip a:hover .back::after{
+	transform: rotate(6deg) translate(100px,-18px);
+}
+
+.flip:active {
+	transform: scale(0.96);
+}
+
+.btn-back {
+	border: none;
+	padding: 0px 12px;
+	font-size: 36px;
+	position: relative;
+	background: var(--main-highlight-color);
+}
+
+.btn-back::before {
+	transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	content: '';
+	width: 100%;
+	height: 70%;
+	background: #5a5a5a;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.btn-back img {
+	width: auto;
+	height: 30px;
+	/* check out mdn docs for different types of blend modes. */
+	mix-blend-mode: multiply;
+}
+
+.btn-back:hover::before {
+	background: var(--main-highlight-color);
+	height: 0%;
+}
 
 /*    Responsive CSS    */
 
