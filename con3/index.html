@@ -1,0 +1,503 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Con³ - Smarthome controller</title>
+    
+    <!--    Stylesheet Files    -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollMagic.js"></script>
+    <script src="js/plugins/animation.gsap.js"></script>
+    
+    <!--    Javascript files are placed before </body>    -->
+  </head>
+  
+  <body>
+    <script>
+        // init controller
+        var controller = new ScrollMagic.Controller();
+    </script>
+    <!--  Start Hero Section  -->
+    <section class="hero">
+      <header>
+        <div class="row">
+          
+
+          <nav class="top-bar" data-topbar role="navigation">
+            
+            <!--    Start Logo    -->
+            <ul class="title-area">
+              <li class="name">
+                <a href="#" class="logo">
+                  <h1>Con<span class="upper">³</span><span class="tld">.com</span></h1>
+                </a>
+              </li>
+                <span class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></span>
+              </li>
+            </ul>  
+            <!--    End Logo    -->
+
+            <!--    Start Navigation Menu    -->
+            <section class="top-bar-section" id="mean_nav">
+              <ul class="right">
+                <li><a href="#values">Values</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#Order">Buy</a></li>
+                <li><a href="#team">Team</a></li>
+              </ul>
+            </section>
+            <!--    End Navigation Menu    -->
+
+          </nav>
+        </div>
+      </header>
+
+      <!--    Start Hero Caption    -->
+      <section class="caption">
+        <div class="row">
+          <h1 class="mean_cap">Let the future into your home.</hA>
+          <h2 class="sub_cap">With just a little rotation.</h2>
+        </div>
+
+        <div id="triggervideo"></div>
+      </section>
+      <!--    End Hero Caption    -->
+
+    </section>
+    <!--  End Hero Section  -->
+    <video id="video" src="video/cube_intro.mp4" muted="muted"></video>
+    <div id="triggeroff"></div>
+    <section class="offering">
+      <div class="row offer">
+          <ul>
+              <li id="off1" class="text_left">smarthome controller</li>
+              <li id="off2" class="text_left">tangible device</li>
+              <li id="off3" class="text_left">multidimensional</li>
+            </ul>
+      </div>
+    </section>
+
+    <script>
+                // build scene
+        //VALUE1
+        var scenev1in = new ScrollMagic.Scene({
+                  triggerElement: "#triggeroff",
+                  offset: 0,
+                  duration: 75
+                })
+                .setTween("#off1", 0.5, {scale: 1.2}) 
+                .addTo(controller);
+        var scenev1out = new ScrollMagic.Scene({
+                  triggerElement: "#triggeroff",
+                  offset: 75,
+                  duration: 10
+                })
+                .setTween("#off1", 0.5, {scale: 1.0}) 
+                .addTo(controller);
+        //VALUE2
+        var scenev2in = new ScrollMagic.Scene({
+                  triggerElement: "#triggeroff",
+                  offset: 75,
+                  duration: 75
+                })
+                .setTween("#off2", 0.5, {scale: 1.2}) 
+                .addTo(controller);
+        var scenev2out = new ScrollMagic.Scene({
+                  triggerElement: "#triggeroff",
+                  offset: 150,
+                  duration: 10
+                })
+                .setTween("#off2", 0.5, {scale: 1.0}) 
+                .addTo(controller);
+        //VALUE3
+        var scenev3in = new ScrollMagic.Scene({
+                  triggerElement: "#triggeroff",
+                  offset: 150,
+                  duration: 100
+                })
+                .setTween("#off3", 0.5, {scale: 1.2}) 
+                .addTo(controller);
+        var scenev3out = new ScrollMagic.Scene({
+                  triggerElement: "#triggeroff",
+                  offset: 250,
+                  duration: 10
+                })
+                .setTween("#off3", 0.5, {scale: 1.0}) 
+                .addTo(controller);
+    </script>
+
+
+    <div id="triggervalue"></div>
+
+
+
+    <!--  Start Values Section  -->
+    <section class="values" id="values">     
+      <div id="valuePin">
+        <!--    Start Values Titles    -->
+        <div class="row">        
+          <h1 class="mean_title">Your benefits using Con<span class="upper">³</span></h1>
+        </div>
+        <!--    End Values Titles    -->
+
+        <!--    Start Values List    -->
+        <div class="row value_list">
+          <div class="value">
+              <div id="value1" class="value_el"> <!--small-12 medium-3 large-3*/-->
+                <div class="flip-card">
+                  <div id="fc-v1" class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/convenience.png" alt="" title="" class="value_icon"/>
+                        <h2 class="title">convenience</h2>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2 class="title">Back</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div id="value2" class="value_el"> <!--small-12 medium-3 large-3*/-->
+                <div class="flip-card">
+                    <div id="fc-v2" class="flip-card-inner">
+                      <div class="flip-card-front">
+                          <img src="img/accessibility.png" alt="" title="" class="value_icon"/>
+                          <h2 class="title">accessibility</h2>
+                      </div>
+                      <div class="flip-card-back">
+                          <h2 class="title">Back</h2>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+      
+              <div id="value3" class="value_el">
+                  <div class="flip-card">
+                      <div id="fc-v3" class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/privacy.png" alt="" title="" class="value_icon"/>
+                            <h2 class="title">privacy</h2>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2 class="title">Back</h2>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  End Values Section  -->
+    <script>
+        // build scene
+        var scenePin = new ScrollMagic.Scene({
+                triggerElement: "#triggervalue",
+                duration: 1300,
+                offset: 350
+                })
+                .setPin("#values")
+                .addTo(controller);
+        //VALUE1
+        var scenev1in = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 200,
+                  duration: 130
+                })
+                .setTween("#value1", 0.5, {scale: 1.2}) 
+                .addTo(controller);
+        var scenev1out = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 330,
+                  duration: 25
+                })
+                .setTween("#value1", 0.5, {scale: 1.0}) 
+                .addTo(controller);
+        var scenev1turnin = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 380,
+                  duration: 50
+                })
+                .setTween("#fc-v1", 0.5, {rotationY: "180_short"}) 
+                .addTo(controller);
+        var scenev1turnout = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 510,
+                  duration: 25
+                })
+                .setTween("#fc-v1", 0.5, {rotationY: "0_short"}) 
+                .addTo(controller);
+        //VALUE2
+        var scenev2in = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 560,
+                  duration: 130
+                })
+                .setTween("#value2", 0.5, {scale: 1.2}) 
+                .addTo(controller);
+        var scenev2out = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 690,
+                  duration: 25
+                })
+                .setTween("#value2", 0.5, {scale: 1.0}) 
+                .addTo(controller);
+        var scenev2turnin = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 740,
+                  duration: 50
+                })
+                .setTween("#fc-v2", 0.5, {rotationY: "180_short"}) 
+                .addTo(controller);
+        var scenev2turnout = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 870,
+                  duration: 25
+                })
+                .setTween("#fc-v2", 0.5, {rotationY: "0_short"}) 
+                .addTo(controller);
+        //VALUE3
+        var scenev3in = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 920,
+                  duration: 130
+                })
+                .setTween("#value3", 0.5, {scale: 1.2}) 
+                .addTo(controller);
+        var scenev3out = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 1050,
+                  duration: 25
+                })
+                .setTween("#value3", 0.5, {scale: 1.0}) 
+                .addTo(controller);
+        var scenev3turnin = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 1100,
+                  duration: 50
+                })
+                .setTween("#fc-v3", 0.5, {rotationY: "180_short"}) 
+                .addTo(controller);
+        var scenev3turnout = new ScrollMagic.Scene({
+                  triggerElement: "#triggervalue",
+                  offset: 1300,
+                  duration: 25
+                })
+                .setTween("#fc-v3", 0.5, {rotationY: "0_short"}) 
+                .addTo(controller);
+    </script>
+
+
+    <!--  Start Quote Section  -->
+    <section class="quote">
+        <blockquote>
+          <p>Mauris semper <span class="strong">lacus nunc</span> ultrices imperdiet. </p>
+          <hr/>
+          <span class="author">john doe</span>
+        </blockquote>
+    </section>
+    <!--  End Quote Section  -->
+
+    <!-- Feature Section -->
+    <section class="features">
+      <div class="row feature_list">
+        <div class="feature_head">
+            <img src="img/action.png" alt="" title="" class="feature_icon"/> <br/>
+            <span class="mean_title">Action</span>
+        </div>
+        <div class="feature_conn"> <img src="img/arrow.svg" alt="" title="" class="arrow_icon"/></div>
+        <div class="feature_head">
+            <img src="img/reaction.png" alt="" title="" class="feature_icon"/> <br/>
+            <span class="mean_title">Reaction</span>
+        </div>
+      </div>
+      <div class="row feature_list">
+          <div class="feature">
+              <ul>
+                <li class="text_left">Gestures</li>
+                <li class="text_left">Pressure Sensitive</li>
+              </ul>
+          </div>
+          <div class="feature_conn">
+             
+          </div>
+          <div class="feature">
+              <ul>
+                  <li class="text_left">Optical and Haptical Feedback</li>
+                </ul>
+          </div>
+        </div>
+    </section>
+
+    <!--  Start Testimonials Section  -->
+    <section class="testimonials" id="testimonials">
+      <div class="row">
+        <div class="slider_container">
+          <div id="carousel">
+            
+            <div class="tesimonial">
+              <img src="img/convenience.png" title="" alt="" class="iconsize">
+              <span class="name">Mashable</span>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <span class="author">Alex Martin - CEO</span>
+            </div>
+
+            <div class="tesimonial">
+              <img src="img/accessibility.png" title="" alt="" class="iconsize">
+              <span class="name">Mashable_2</span>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <span class="author">Alex Martin - CEO</span>
+            </div>
+
+            <div class="tesimonial">
+              <img src="img/privacy.png" title="" alt="" class="iconsize">
+              <span class="name">Mashable_3</span>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <span class="author">Alex Martin - CEO</span>
+            </div>
+
+          </div>          
+        </div>
+
+        <!--    Start Testimonials Pagination    -->
+        <nav class="pagination">
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#" class="selected">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </nav>
+        <!--    End Testimonials Pagination    -->
+
+      </div>
+    </section>
+    <!--  End Testimonials Section  -->
+
+
+
+    <!--  Start Call To Action Section  -->
+    <section class="cta" id="Order">
+      <div class="row">
+
+        <!--    Start CTA Titles    -->
+        <h1 class="title">Are you ready to change your life?</h1>
+        <!--    End CTA Titles    -->
+
+        <!--    Start Button    -->
+        <a href="#" class="btn_fancy">
+          <div class="solid_layer"></div>
+          <div class="border_layer"></div>
+          <div class="text_layer">Preorder It Now!</div>
+        </a>
+        <!--    End Button    -->
+
+      </div>
+    </section>
+    <!--  End Call To Action Section  -->
+
+    <section class="team" id="team">
+      <div class="row">
+          <h1 class="mean_title">Our Team</h1>
+      </div>
+
+      <div class="row member_list">
+        <div class="members">
+            <div class="member">
+                <img class="rounded-circle" src="img/person.png" title="" alt="">
+                    <span class="name">Member 1</span>
+              </div>
+      
+              <div class="member">
+                  <img class="rounded-circle" src="img/person.png" title="" alt="">
+                    <span class="name">Member 2</span>
+              </div>
+      
+              <div class="member">
+                  <img class="rounded-circle" src="img/person.png" title="" alt="">
+                    <span class="name">Member 3</span>
+              </div>
+      
+              <div class="member">
+                  <img class="rounded-circle" src="img/person.png" title="" alt="">
+                    <span class="name">Member 4</span>
+              </div>
+      
+              <div class="member">
+                  <img class="rounded-circle" src="img/person.png" title="" alt="">
+                    <span class="name">Member 5</span>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Start Footer Section  -->
+    <footer>
+      <div class="row">
+        
+        <!--    Start Copyrights    -->
+        <div class="small-12 medium-4 large-4 columns">
+          <div class="copyrights">
+            <a class="logo" href="#">
+                <h1>Con<span class="upper">³</span><span class="tld">.com</span></h1>
+            </a>
+            <p>Copyright © 2019 Con³</p>
+          </div>
+        </div>
+        <!--    End Copyrights    -->
+
+
+        <div class="small-12 medium-8 large-8 columns">
+          <div class="contact_details right">
+            <nav class="social">
+              <ul class="no-bullet">
+                <li><a href="http://facebook.com/con3" target="_blank">Facebook</a></li>
+                <li><a href="http://instagram.com/con3" target="_blank">Instagram</a></li>
+                <li><a href="http://twitter.com/con3" target="_blank">Twitter</a></li>
+              </ul>
+            </nav>
+
+            <div class="contact">
+              <div class="details">
+                <p>contact@con3.com</p>
+                <p>+49377 1234 789</p>
+              </div>
+
+              <p class="adress">Nöthnitzer Straße 32
+              Dresden, 01159</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+    <!--  End Footer Section  -->
+
+    <!--    Start Back To Top    -->
+    <a href="#" class="btn_fancy" id="back_top">
+      <div class="solid_layer"></div>
+      <div class="border_layer"></div>
+      <div class="text_layer"><img src="img/top_arrow.png" alt="Back to top" title="" class="top_arrow"></div>
+    </a>
+    <!--    End Back To Top    -->
+
+
+
+
+
+    <!--    Javascript Files    -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="js/foundation/foundation.topbar.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/scrollTo.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>
