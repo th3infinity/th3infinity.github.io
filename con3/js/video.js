@@ -13,13 +13,12 @@ let scrollpos = 0;
 let lastpos;
 //const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
-  triggerElement: "#triggervideo",
-  offset: 300 
+  offset: 400 
 });
 const startScrollAnimation = () => {
   scene
     .addTo(controller)
-    .duration(2800)
+    .duration(2200)
     .on("progress", (e) => {
       scrollpos = e.progress;
     });

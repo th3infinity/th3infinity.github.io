@@ -21,8 +21,24 @@
         // init controller
         var controller = new ScrollMagic.Controller();
     </script>
+
+    <!--  Video Layer  -->
+    <video id="video" src="video/cube_intro.mp4" muted="muted"></video>
+
+    <!--  Start Offering Section  -->
+    <section class="offering" id="offering">
+        <div class="row offer">
+            <ul>
+                <li id="off1" class="text_left">smarthome controller</li>
+                <li id="off2" class="text_left">tangible device</li>
+                <li id="off3" class="text_left">multidimensional</li>
+              </ul>
+        </div>
+      </section>
+    <!--  End Offering Section  -->
+
     <!--  Start Hero Section  -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <header>
         <div class="row">
           
@@ -69,62 +85,83 @@
 
     </section>
     <!--  End Hero Section  -->
-    <video id="video" src="video/cube_intro.mp4" muted="muted"></video>
-    <div id="triggeroff"></div>
-    <section class="offering">
-      <div class="row offer">
-          <ul>
-              <li id="off1" class="text_left">smarthome controller</li>
-              <li id="off2" class="text_left">tangible device</li>
-              <li id="off3" class="text_left">multidimensional</li>
-            </ul>
-      </div>
-    </section>
+
+    <script>
+        var scenePin = new ScrollMagic.Scene({
+                duration: 400
+              })
+              .setPin("#hero")
+              .addTo(controller);
+
+
+        var heroOut = new ScrollMagic.Scene({
+                duration: 400
+              })
+              .setTween("#hero", 0.5,{opacity: 0}) 
+              .addTo(controller);
+        
+        var videoPin = new ScrollMagic.Scene({
+                duration: 2100
+              })
+              .setPin("#video")
+              .addTo(controller);
+    </script>
 
     <script>
                 // build scene
+        var offerPin = new ScrollMagic.Scene({
+                duration: 2100
+              })
+              .setPin("#offering")
+              .addTo(controller);
+        var offerIn = new ScrollMagic.Scene({
+                offset: 800,
+                duration: 400
+              })
+              .setTween("#offering", 0.5,{opacity: 1}) 
+              .addTo(controller);
+        var valueHighlightOffset = 1000;
         //VALUE1
         var scenev1in = new ScrollMagic.Scene({
-                  triggerElement: "#triggeroff",
-                  offset: 0,
-                  duration: 75
+                  offset: valueHighlightOffset,
+                  duration: 150
                 })
                 .setTween("#off1", 0.5, {scale: 1.2}) 
                 .addTo(controller);
+        valueHighlightOffset += 200;
         var scenev1out = new ScrollMagic.Scene({
-                  triggerElement: "#triggeroff",
-                  offset: 75,
-                  duration: 10
+                  offset: valueHighlightOffset,
+                  duration: 150
                 })
                 .setTween("#off1", 0.5, {scale: 1.0}) 
                 .addTo(controller);
         //VALUE2
+        valueHighlightOffset += 200;
         var scenev2in = new ScrollMagic.Scene({
-                  triggerElement: "#triggeroff",
-                  offset: 75,
-                  duration: 75
+                  offset: valueHighlightOffset,
+                  duration: 150
                 })
                 .setTween("#off2", 0.5, {scale: 1.2}) 
                 .addTo(controller);
+        valueHighlightOffset += 200;
         var scenev2out = new ScrollMagic.Scene({
-                  triggerElement: "#triggeroff",
-                  offset: 150,
-                  duration: 10
+                  offset: valueHighlightOffset,
+                  duration: 150
                 })
                 .setTween("#off2", 0.5, {scale: 1.0}) 
                 .addTo(controller);
         //VALUE3
+        valueHighlightOffset += 200;
         var scenev3in = new ScrollMagic.Scene({
-                  triggerElement: "#triggeroff",
-                  offset: 150,
-                  duration: 100
+                  offset: valueHighlightOffset,
+                  duration: 150
                 })
                 .setTween("#off3", 0.5, {scale: 1.2}) 
                 .addTo(controller);
+        valueHighlightOffset += 200;
         var scenev3out = new ScrollMagic.Scene({
-                  triggerElement: "#triggeroff",
-                  offset: 250,
-                  duration: 10
+                  offset: valueHighlightOffset,
+                  duration: 150
                 })
                 .setTween("#off3", 0.5, {scale: 1.0}) 
                 .addTo(controller);
@@ -149,7 +186,7 @@
           <div class="value">
               <div id="value1" class="value_el"> <!--small-12 medium-3 large-3*/-->
                 <div class="flip-card">
-                  <div id="fc-v1" class="flip-card-inner" onmouseenter="flipBack(this)" onmouseleave="flipFront(this)">
+                  <div id="fc-v1" class="flip-card-inner"> <!--onmouseenter="flipBack(this)" onmouseleave="flipFront(this)"-->
                     <div class="flip-card-front">
                         <img src="img/convenience.png" alt="" title="" class="value_icon"/>
                         <h2 class="title">convenience</h2>
@@ -163,7 +200,7 @@
       
               <div id="value2" class="value_el"> <!--small-12 medium-3 large-3*/-->
                 <div class="flip-card">
-                    <div id="fc-v2" class="flip-card-inner" onmouseenter="flipBack(this)" onmouseleave="flipFront(this)">
+                    <div id="fc-v2" class="flip-card-inner"> <!--onmouseenter="flipBack(this)" onmouseleave="flipFront(this)"-->
                       <div class="flip-card-front">
                           <img src="img/accessibility.png" alt="" title="" class="value_icon"/>
                           <h2 class="title">accessibility</h2>
@@ -177,7 +214,7 @@
       
               <div id="value3" class="value_el">
                   <div class="flip-card">
-                      <div id="fc-v3" class="flip-card-inner" onmouseenter="flipBack(this)" onmouseleave="flipFront(this)">
+                      <div id="fc-v3" class="flip-card-inner"> <!--onmouseenter="flipBack(this)" onmouseleave="flipFront(this)"-->
                         <div class="flip-card-front">
                             <img src="img/privacy.png" alt="" title="" class="value_icon"/>
                             <h2 class="title">privacy</h2>
@@ -197,7 +234,7 @@
         // build scene
         var scenePin = new ScrollMagic.Scene({
                 triggerElement: "#triggervalue",
-                duration: 1800,
+                duration: 1100,
                 offset: 350
                 })
                 .setPin("#values")
@@ -206,18 +243,18 @@
         var scenev1in = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
                   offset: 200,
-                  duration: 130
+                  duration: 200
                 })
                 .setTween("#value1", 0.5, {scale: 1.2}) 
                 .addTo(controller);
         var scenev1out = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 350,
-                  duration: 25
+                  offset: 450,
+                  duration: 200
                 })
                 .setTween("#value1", 0.5, {scale: 1.0}) 
                 .addTo(controller);
-        var scenev1turnin = new ScrollMagic.Scene({
+        /*var scenev1turnin = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
                   offset: 400,
                   duration: 50
@@ -230,23 +267,23 @@
                   duration: 50
                 })
                 .setTween("#fc-v1", 0.5, {rotationY: "0_short"}) 
-                .addTo(controller);
+                .addTo(controller);*/
         //VALUE2
         var scenev2in = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 800,
-                  duration: 130
+                  offset: 500,
+                  duration: 200
                 })
                 .setTween("#value2", 0.5, {scale: 1.2}) 
                 .addTo(controller);
         var scenev2out = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 950,
-                  duration: 50
+                  offset: 750,
+                  duration: 200
                 })
                 .setTween("#value2", 0.5, {scale: 1.0}) 
                 .addTo(controller);
-        var scenev2turnin = new ScrollMagic.Scene({
+        /*var scenev2turnin = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
                   offset: 1100,
                   duration: 50
@@ -259,23 +296,23 @@
                   duration: 50
                 })
                 .setTween("#fc-v2", 0.5, {rotationY: "0_short"}) 
-                .addTo(controller);
+                .addTo(controller);*/
         //VALUE3
         var scenev3in = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 1450,
-                  duration: 130
+                  offset: 1000,
+                  duration: 200
                 })
                 .setTween("#value3", 0.5, {scale: 1.2}) 
                 .addTo(controller);
         var scenev3out = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
-                  offset: 1600,
-                  duration: 50
+                  offset: 1250,
+                  duration: 200
                 })
                 .setTween("#value3", 0.5, {scale: 1.0}) 
                 .addTo(controller);
-        var scenev3turnin = new ScrollMagic.Scene({
+        /*var scenev3turnin = new ScrollMagic.Scene({
                   triggerElement: "#triggervalue",
                   offset: 1700,
                   duration: 50
@@ -288,7 +325,7 @@
                   duration: 50
                 })
                 .setTween("#fc-v3", 0.5, {rotationY: "0_short"}) 
-                .addTo(controller);
+                .addTo(controller);*/
     </script>
 
 
@@ -327,7 +364,8 @@
           </div>
           <div class="feature">
               <ul>
-                  <li class="text_left">Optical and Haptical Feedback</li>
+                  <li class="text_left">Optical Feedback</li>
+                  <li class="text_left">Haptical Feedback</li>
                 </ul>
           </div>
         </div>
@@ -388,11 +426,13 @@
         <!--    End CTA Titles    -->
 
         <!--    Order Button    -->
-        <div class="flip">
-          <a href="#">
-            <div class="front">Preorder It Now!</div>
-            <div class="back">Preorder It Now!</div>
-          </a>
+        <div class="flipContainer">
+            <div class="flip">
+                <a href="#">
+                  <div class="front">Preorder It Now!</div>
+                  <div class="back">Preorder It Now!</div>
+                </a>
+              </div>
         </div>
         <!--    End Button    -->
 

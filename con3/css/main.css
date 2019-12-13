@@ -205,6 +205,10 @@
 /*    Hero    */
 
 .hero{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
 	width: 100%;
 	height: 100%;
 	background-color: var(--main-bg-color);
@@ -264,9 +268,14 @@
 
 
 .offering{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 	width: 100%;
 	height: 500px;
-	background-color: var(--main-bg-color);
+	opacity: 0;
+	background-color: transparent;/*var(--main-bg-color);*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -277,6 +286,8 @@
 
 .offering .offer {
 	max-width: 25%;
+	margin-left: 20%;
+	margin-top: 20%;
 }
 
 .offering .text_left {
@@ -285,7 +296,11 @@
 	text-transform: uppercase;
 }
 
-
+video {
+	width: 100%;
+	height: auto;
+	z-index: -2;
+}
 
 
 /*    Header    */
@@ -399,10 +414,10 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover{
 }
 
 .values .value_list .value_icon{
-	max-width: 30%;
+	width: 30%;
 	height: auto;
 	margin-bottom: 30px;
-	margin-top: 20%;
+	margin-top: 40px;
 }
 
 .values .value_list .value_el {
@@ -826,7 +841,7 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover{
 	width: 40%;
 	height: auto;
 	margin: 0 auto;
-	padding: 0 100px;
+	padding: 0 0 0 120px;
 	display: inline-block;
 }
 
@@ -1013,17 +1028,21 @@ footer p{
 	        transform:translate(-1px,1px);
 }
 
-
+.flipContainer {
+	margin-top: 50px;
+}
 
 .flip {
-	margin: 40px 25% 0 0;
-	
+	/*margin: 40px 0 0 0;
+	text-align: center;
 	display: inline-block;
 	position: relative;
-	text-align: center;
-	/*width: 250px;*/
+	
+	width: 250px;*/
 	height: 48px;
 	perspective: 500px;
+	width: 25%;
+	margin-left: 25%;
 	/*top: 50%;
 	left: 50%;
 	margin: -24px 0 0 -80px; */
@@ -1046,7 +1065,7 @@ footer p{
 
 .flip a .front,.back {
 	margin: 0;
-	width: 250px;
+	width: 100%;
 	height: 48px;
 	line-height: 48px;
 	position: absolute;
@@ -1066,7 +1085,8 @@ footer p{
 	transform: rotateX(90deg) translateZ(24px);
 	overflow: hidden;
 }
-
+/*Flip Animation*/
+/*
 .flip a .back::after {
 	content: '';
 	position: absolute;
@@ -1078,7 +1098,7 @@ footer p{
 	transform: rotate(8deg);
 	transition: all .5s ease;
 	transition-delay: .15s;
-}
+}*/
 
 .flip a:hover {
 	transform: translateZ(-24px) rotateX(-90deg);
