@@ -13,42 +13,42 @@ let scrollpos = 0;
 let lastpos;
 //const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
-  offset: 400 
+    offset: 400
 });
 const startScrollAnimation = () => {
-  scene
-    .addTo(controller)
-    .duration(2200)
-    .on("progress", (e) => {
-      scrollpos = e.progress;
-    });
+    scene
+        .addTo(controller)
+        .duration(2200)
+        .on("progress", (e) => {
+            scrollpos = e.progress;
+        });
 
-  setInterval(() => {
-    if (lastpos === scrollpos) return;
-    requestAnimationFrame(() => {
-      video.currentTime = video.duration * scrollpos;
-      video.pause();
-      lastpos = scrollpos;
-      console.log(video.currentTime, scrollpos);
-    });
-  }, 50);
+    setInterval(() => {
+        if (lastpos === scrollpos) return;
+        requestAnimationFrame(() => {
+            video.currentTime = video.duration * scrollpos;
+            video.pause();
+            lastpos = scrollpos;
+            //console.log(video.currentTime, scrollpos);
+        });
+    }, 50);
 };
 
 const preloadVideo = (v, callback) => {
-  const ready = () => {
-    v.removeEventListener('canplaythrough', ready);
+    const ready = () => {
+        v.removeEventListener('canplaythrough', ready);
 
-    video.pause();
-    var i = setInterval(function() {
-      if (v.readyState > 3) {
-        clearInterval(i);
-        video.currentTime = 0;
-        callback();
-      }
-    }, 50);
-  };
-  v.addEventListener('canplaythrough', ready, false);
-  v.play();
+        video.pause();
+        var i = setInterval(function() {
+            if (v.readyState > 3) {
+                clearInterval(i);
+                video.currentTime = 0;
+                callback();
+            }
+        }, 50);
+    };
+    v.addEventListener('canplaythrough', ready, false);
+    v.play();
 };
 
 preloadVideo(video, startScrollAnimation);
