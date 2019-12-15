@@ -323,7 +323,7 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover {
 
 .values {
     width: 100%;
-    padding: 140px 0;
+    padding: 50px 0 100px 0;
 }
 
 .values .mean_title,
@@ -371,7 +371,7 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover {
 }
 
 .flip-card {
-    height: 25vh;
+    height: 35vh;
     position: relative;
     background-color: transparent;
     perspective: 1000px;
@@ -421,7 +421,7 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover {
 
 .flip-card-back {
     position: relative;
-    top: -101.5%;
+    top: -100%;
     background-color: var(--main-highlight-color);
     border-radius: 15px;
     color: #454545;
@@ -433,6 +433,20 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover {
     font-family: "raleway-regular", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 30px;
+}
+
+.values .value_list .flip-card p {
+    line-height: 18px;
+    padding: 20px 15px 0 15px;
+    margin-bottom: 0;
+}
+
+.values .value_list .flip-card p .strong {
+    font-weight: bold;
+}
+
+.values .value_list .flip-card p .first {
+    padding: 20px 15px;
 }
 
 .values .title {
