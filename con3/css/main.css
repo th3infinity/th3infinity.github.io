@@ -588,6 +588,21 @@ header .top-bar-section li:not(.has-form) a:not(.button):hover {
 }
 
 
+/* Smoke Video */
+
+.smokevideo {
+    display: table;
+    width: 100%;
+    height: 500px;
+    margin: 25px 20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+
 /*    Testimonials    */
 
 .testimonials {
